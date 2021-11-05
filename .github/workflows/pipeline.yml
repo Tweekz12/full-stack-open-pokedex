@@ -25,6 +25,8 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "intense-garden-49162" #Must be unique in Heroku
           heroku_email: "andreipetrea49@gmail.com"
+          healthcheck: "https://intense-garden-49162.herokuapp.com/health"
+          checkstring: "ok"
       - name: npm install
         run: npm install
       - name: lint
